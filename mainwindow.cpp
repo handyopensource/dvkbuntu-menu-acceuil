@@ -20,28 +20,30 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_ConfigORCA_clicked()
 {
-    system("kcmshell5 kcmaccess");
-
+    QProcess *myProcess1 = new QProcess(this);
+    myProcess1->start("kcmshell5 kcmaccess");
 }
 
 void MainWindow::on_Discord_clicked()
 {
-    QDesktopServices::openUrl(QUrl("https://discord.gg/FtsNjjC", QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl("https://discord.gg/zG7g8cU", QUrl::TolerantMode));
 }
 
 void MainWindow::on_Forum_clicked()
 {
-    QDesktopServices::openUrl(QUrl("https://www.forum.dvkbuntu.org", QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl("https://forum.dvkbuntu.org", QUrl::TolerantMode));
 }
 
 void MainWindow::on_OuvrirFirefox_clicked()
 {
-    system("/usr/bin/firefox");
+    QProcess *myProcess2 = new QProcess(this);
+    myProcess2->start("/usr/bin/firefox");
 }
 
 void MainWindow::on_OuvrirKmag_clicked()
 {
-    system("/usr/bin/kmag");
+    QProcess *myProcess3 = new QProcess(this);
+    myProcess3->start("/usr/bin/kmag");
 }
 
 void MainWindow::on_OuvrirSiteWeb_clicked()
