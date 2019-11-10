@@ -32,7 +32,7 @@ private slots:
 
     void on_Contacts_clicked();
 
-    void on_OuvrirChromium_clicked();
+    void on_OuvrirNavigateur_clicked();
 
     void on_ScaleFactor_valueChanged(int value);
 

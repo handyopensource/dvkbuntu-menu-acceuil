@@ -50,10 +50,9 @@ void MainWindow::on_Forum_clicked()
     QDesktopServices::openUrl(QUrl("https://forum.dvkbuntu.org", QUrl::TolerantMode));
 }
 
-void MainWindow::on_OuvrirChromium_clicked()
+void MainWindow::on_OuvrirNavigateur_clicked()
 {
-    QProcess *myProcess2 = new QProcess(this);
-    myProcess2->startDetached("/usr/bin/chromium-browser");
+    QDesktopServices::openUrl(QUrl("file:///home/Accueil_local/index.html", QUrl::TolerantMode));
 }
 
 void MainWindow::on_OuvrirKmag_clicked()

@@ -69,10 +69,10 @@ background-image: url(:/images/DVKBuntu-etoiles-filantes.jpg);
 background-image: rgba(255, 255, 255, 0);
 }</string>
    </property>
-   <widget class="QPushButton" name="OuvrirChromium">
+   <widget class="QPushButton" name="OuvrirNavigateur">
     <property name="geometry">
      <rect>
-      <x>39</x>
+      <x>40</x>
       <y>200</y>
       <width>220</width>
       <height>100</height>
@@ -92,12 +92,11 @@ background:rgb(0, 0, 0)
 }</string>
     </property>
     <property name="text">
-     <string>Ouvrir 
-Chromium</string>
+     <string>Naviguer 
+Sur le net</string>
     </property>
     <property name="icon">
-     <iconset theme="chromium-browser">
-      <normaloff>.</normaloff>.</iconset>
+     <iconset theme="internet-web-browser"/>
     </property>
     <property name="iconSize">
      <size>
@@ -446,7 +445,8 @@ background:rgb(0, 0, 0)
      <string/>
     </property>
     <property name="icon">
-     <iconset theme="system-shutdown"/>
+     <iconset theme="system-shutdown">
+      <normaloff>.</normaloff>.</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -471,7 +471,8 @@ background:rgb(0, 0, 0)
      <string/>
     </property>
     <property name="icon">
-     <iconset theme="system-reboot"/>
+     <iconset theme="system-reboot">
+      <normaloff>.</normaloff>.</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -496,7 +497,8 @@ background:rgb(0, 0, 0)
      <string/>
     </property>
     <property name="icon">
-     <iconset theme="system-log-out"/>
+     <iconset theme="system-log-out">
+      <normaloff>.</normaloff>.</iconset>
     </property>
     <property name="iconSize">
      <size>
