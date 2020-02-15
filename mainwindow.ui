@@ -96,7 +96,8 @@ background:rgb(0, 0, 0)
 Sur le net</string>
     </property>
     <property name="icon">
-     <iconset theme="internet-web-browser"/>
+     <iconset theme="internet-web-browser">
+      <normaloff>.</normaloff>.</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -265,7 +266,7 @@ Discord </string>
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="Forum">
+   <widget class="QPushButton" name="NoComprendo">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -280,7 +281,7 @@ Discord </string>
      </font>
     </property>
     <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Accès aux&lt;/p&gt;&lt;p&gt;forum de &lt;/p&gt;&lt;p&gt;DVKBuntu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lancement&lt;/p&gt;&lt;p&gt;Asistant Vocal&lt;/p&gt;&lt;p&gt;NoComprendo&lt;/p&gt;&lt;p&gt;Pour DVKBuntu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
@@ -288,12 +289,12 @@ background:rgb(0, 0, 0)
 }</string>
     </property>
     <property name="text">
-     <string>Ouvrir
-au forum</string>
+     <string>Assistant
+Vocal</string>
     </property>
     <property name="icon">
      <iconset resource="resources.qrc">
-      <normaloff>:/images/Forum.png</normaloff>:/images/Forum.png</iconset>
+      <normaloff>:/images/NoComprendo.jpg</normaloff>:/images/NoComprendo.jpg</iconset>
     </property>
     <property name="iconSize">
      <size>

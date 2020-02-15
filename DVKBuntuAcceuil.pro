@@ -49,7 +49,9 @@ DISTFILES += \
     images/Discord.svg \
     images/Logo.png \
     images/Forum.png \
-    kcmaccess.desktop
+    kcmaccess.desktop \
+    images/NoComprendo.png \
+    images/NoComprendo.jpg
 
 RESOURCES += \
     resources.qrc

@@ -24,7 +24,7 @@ private slots:
 
     void on_Discord_clicked();
 
-    void on_Forum_clicked();
+    void on_NoComprendo_clicked();
 
     void on_OuvrirKmag_clicked();
 

@@ -12,6 +12,7 @@
 #include <qurl.h>
 #include <QMessageBox>
 #include <QSettings>
+#include <fstream>
 #include <string>
 #include <sstream>
 #include <iostream>
@@ -34,6 +35,12 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+bool is_readable( const std::string & file )
+{
+    std::ifstream fichier( file.c_str() );
+    return (bool) fichier != 0;
+}
+
 void MainWindow::on_ConfigORCA_clicked()
 {
     QProcess *myProcess1 = new QProcess(this);
@@ -45,9 +52,20 @@ void MainWindow::on_Discord_clicked()
     QDesktopServices::openUrl(QUrl("https://discord.gg/zG7g8cU", QUrl::TolerantMode));
 }
 
-void MainWindow::on_Forum_clicked()
+void MainWindow::on_NoComprendo_clicked()
 {
-    QDesktopServices::openUrl(QUrl("https://forum.dvkbuntu.org", QUrl::TolerantMode));
+    using std::cout;
+    if ( is_readable( "/usr/bin/nocomprendo" ) )
+    {
+        QProcess *myProcess3 = new QProcess(this);
+        myProcess3->startDetached("/usr/bin/nocomprendo");
+    }
+    else
+    {
+        /* Le fichier n'existe pas */
+        QMessageBox::warning(this, "NoComprendo Non Installé", "Veuillez suivre les instructions d'installation sur la page web qui va s'ouvrir");
+        QDesktopServices::openUrl(QUrl("https://github.com/handyopensource/dvkbuntu-script-tts", QUrl::TolerantMode));
+    }
 }
 
 void MainWindow::on_OuvrirNavigateur_clicked()
