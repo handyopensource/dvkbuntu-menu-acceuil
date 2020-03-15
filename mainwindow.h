@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtWidgets/QMouseEventTransition>
+#include <QtWidgets>
+#include <QMediaPlayer>
 
 namespace Ui {
 class MainWindow;
@@ -18,6 +21,8 @@ public:
     //ScaleFactor().setValue(myscale);
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    virtual bool eventFilter(QObject* watched, QEvent* event);
+    QMediaPlayer *player = new QMediaPlayer;
 
 private slots:
     void on_ConfigORCA_clicked();

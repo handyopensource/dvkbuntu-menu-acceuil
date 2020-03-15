@@ -10,5 +10,33 @@
         <file>images/Logo.png</file>
         <file>images/Forum.png</file>
         <file>images/NoComprendo.jpg</file>
+        <file>Sound/1-connexion_session.ogg</file>
+        <file>Sound/10-DiscordLink.ogg</file>
+        <file>Sound/11-Email.ogg</file>
+        <file>Sound/12-Shutdown.ogg</file>
+        <file>Sound/13-Reboot.ogg</file>
+        <file>Sound/14-LeaveSession.ogg</file>
+        <file>Sound/2-bouton_reboot.ogg</file>
+        <file>Sound/3-bouton_shutdown.ogg</file>
+        <file>Sound/4-bouton_delog.ogg</file>
+        <file>Sound/5-browser.ogg</file>
+        <file>Sound/6-Kmag.ogg</file>
+        <file>Sound/7-AccesHandicap.ogg</file>
+        <file>Sound/8-SiteWeb.ogg</file>
+        <file>Sound/9-nocomprendo.ogg</file>
+        <file>Sound/1-connexion_session.ogg.wav</file>
+        <file>Sound/2-bouton_reboot.ogg.wav</file>
+        <file>Sound/3-bouton_shutdown.ogg.wav</file>
+        <file>Sound/4-bouton_delog.ogg.wav</file>
+        <file>Sound/5-browser.ogg.wav</file>
+        <file>Sound/6-Kmag.ogg.wav</file>
+        <file>Sound/7-AccesHandicap.ogg.wav</file>
+        <file>Sound/8-SiteWeb.ogg.wav</file>
+        <file>Sound/9-nocomprendo.ogg.wav</file>
+        <file>Sound/10-DiscordLink.ogg.wav</file>
+        <file>Sound/11-Email.ogg.wav</file>
+        <file>Sound/12-Shutdown.ogg.wav</file>
+        <file>Sound/13-Reboot.ogg.wav</file>
+        <file>Sound/14-LeaveSession.ogg.wav</file>
     </qresource>
 </RCC>
