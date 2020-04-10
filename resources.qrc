@@ -38,5 +38,7 @@
         <file>Sound/12-Shutdown.ogg.wav</file>
         <file>Sound/13-Reboot.ogg.wav</file>
         <file>Sound/14-LeaveSession.ogg.wav</file>
+        <file>images/vocalflyicon.png</file>
+        <file>images/GitHub.png</file>
     </qresource>
 </RCC>

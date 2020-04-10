@@ -23,6 +23,8 @@ public:
     ~MainWindow();
     virtual bool eventFilter(QObject* watched, QEvent* event);
     QMediaPlayer *player = new QMediaPlayer;
+    QProcess *m_process = new QProcess;
+    QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
 
 private slots:
     void on_ConfigORCA_clicked();
@@ -49,8 +51,15 @@ private slots:
 
     void on_Deconnection_clicked();
 
+    void on_Forum_clicked();
+
+    void on_VocalFly_clicked();
+
+    void on_GitHub_clicked();
+
 private:
     Ui::MainWindow *ui;
+    bool play = false;
 };
 
 #endif // MAINWINDOW_H

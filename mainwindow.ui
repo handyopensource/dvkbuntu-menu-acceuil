@@ -12,19 +12,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
+    <width>1200</width>
     <height>600</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1000</width>
+    <width>1200</width>
     <height>600</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1000</width>
+    <width>1200</width>
     <height>600</height>
    </size>
   </property>
@@ -53,9 +53,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">QMainWindow {
-background-image: url(:/images/DVKBuntu-etoiles-filantes.jpg);
-}</string>
+   <string notr="true">background-color: rgb(0, 0, 0);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="enabled">
@@ -72,8 +70,8 @@ background-image: rgba(255, 255, 255, 0);
    <widget class="QPushButton" name="OuvrirNavigateur">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>200</y>
+      <x>20</x>
+      <y>210</y>
       <width>220</width>
       <height>100</height>
      </rect>
@@ -115,8 +113,8 @@ Sur le net</string>
    <widget class="QPushButton" name="OuvrirKmag">
     <property name="geometry">
      <rect>
-      <x>289</x>
-      <y>200</y>
+      <x>259</x>
+      <y>210</y>
       <width>220</width>
       <height>100</height>
      </rect>
@@ -127,13 +125,9 @@ Sur le net</string>
      </font>
     </property>
     <property name="toolTip">
-     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Ouverture &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;de la loupe&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;d'écran&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;body&gt;Ouverture &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;de la loupe&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;d'écran&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
@@ -158,8 +152,8 @@ Kmag</string>
    <widget class="QPushButton" name="ConfigORCA">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>200</y>
+      <x>500</x>
+      <y>210</y>
       <width>220</width>
       <height>100</height>
      </rect>
@@ -195,8 +189,8 @@ Handicap</string>
    <widget class="QPushButton" name="OuvrirSiteWeb">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>320</y>
+      <x>20</x>
+      <y>330</y>
       <width>220</width>
       <height>100</height>
      </rect>
@@ -232,8 +226,8 @@ Site Web</string>
    <widget class="QPushButton" name="Discord">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>320</y>
+      <x>740</x>
+      <y>210</y>
       <width>220</width>
       <height>100</height>
      </rect>
@@ -269,8 +263,8 @@ Discord </string>
    <widget class="QPushButton" name="NoComprendo">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>320</y>
+      <x>260</x>
+      <y>330</y>
       <width>220</width>
       <height>100</height>
      </rect>
@@ -306,10 +300,10 @@ Vocal</string>
    <widget class="QPushButton" name="Contacts">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>440</y>
-      <width>221</width>
-      <height>91</height>
+      <x>740</x>
+      <y>450</y>
+      <width>220</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -352,10 +346,10 @@ nous</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>430</y>
-      <width>561</width>
-      <height>101</height>
+      <x>260</x>
+      <y>450</y>
+      <width>460</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -436,8 +430,8 @@ background:rgb(0, 0, 0)
    <widget class="QPushButton" name="Power">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>10</y>
+      <x>1010</x>
+      <y>30</y>
       <width>176</width>
       <height>171</height>
      </rect>
@@ -462,7 +456,7 @@ background:rgb(0, 0, 0)
    <widget class="QPushButton" name="Reboot">
     <property name="geometry">
      <rect>
-      <x>810</x>
+      <x>1010</x>
       <y>190</y>
       <width>176</width>
       <height>171</height>
@@ -488,8 +482,8 @@ background:rgb(0, 0, 0)
    <widget class="QPushButton" name="Deconnection">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>370</y>
+      <x>1010</x>
+      <y>360</y>
       <width>176</width>
       <height>171</height>
      </rect>
@@ -511,6 +505,155 @@ background:rgb(0, 0, 0)
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="Forum">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>450</y>
+      <width>220</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ouverture&lt;/p&gt;&lt;p&gt;du forum&lt;/p&gt;&lt;p&gt;DVKBuntu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background:rgb(0, 0, 0)
+}</string>
+    </property>
+    <property name="text">
+     <string>Ouvrir
+le Forum</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/images/Forum.png</normaloff>:/images/Forum.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>48</width>
+      <height>48</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="VocalFly">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>330</y>
+      <width>220</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lancement&lt;/p&gt;&lt;p&gt;interface de&lt;/p&gt;&lt;p&gt;gestion de VocalFly&lt;/p&gt;&lt;p&gt;Pour DVKBuntu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background:rgb(0, 0, 0)
+}</string>
+    </property>
+    <property name="text">
+     <string>VocalFly</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/images/vocalflyicon.png</normaloff>:/images/vocalflyicon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="GitHub">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>330</y>
+      <width>220</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Voir le code&lt;/p&gt;&lt;p&gt;source de&lt;/p&gt;&lt;p&gt;DVKBuntu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background:rgb(0, 0, 0)
+}</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhLatinOnly</set>
+    </property>
+    <property name="text">
+     <string>Voir le 
+Code</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/images/GitHub.png</normaloff>:/images/GitHub.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>48</width>
+      <height>48</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Image">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>0</y>
+      <width>1241</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/images/DVKBuntu-etoiles-filantes.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>Image</zorder>
+   <zorder>OuvrirNavigateur</zorder>
+   <zorder>OuvrirKmag</zorder>
+   <zorder>ConfigORCA</zorder>
+   <zorder>OuvrirSiteWeb</zorder>
+   <zorder>Discord</zorder>
+   <zorder>NoComprendo</zorder>
+   <zorder>Contacts</zorder>
+   <zorder>label</zorder>
+   <zorder>ScaleFactor</zorder>
+   <zorder>ScaleFactorValue</zorder>
+   <zorder>Power</zorder>
+   <zorder>Reboot</zorder>
+   <zorder>Deconnection</zorder>
+   <zorder>Forum</zorder>
+   <zorder>VocalFly</zorder>
+   <zorder>GitHub</zorder>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">

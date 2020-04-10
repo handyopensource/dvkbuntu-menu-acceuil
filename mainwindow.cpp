@@ -40,15 +40,21 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->OuvrirKmag->installEventFilter(this);
     ui->OuvrirSiteWeb->installEventFilter(this);
     ui->OuvrirNavigateur->installEventFilter(this);
+    ui->Forum->installEventFilter(this);
+    ui->GitHub->installEventFilter(this);
     ui->NoComprendo->installEventFilter(this);
+    ui->VocalFly->installEventFilter(this);
     ui->Contacts->installEventFilter(this);
     ui->Power->installEventFilter(this);
     ui->Reboot->installEventFilter(this);
     ui->Deconnection->installEventFilter(this);
     ui->label->setStyleSheet("background-color: black");
-    player->setVolume(50);
-    player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/1-connexion_session.ogg.wav"));
-    player->play();
+    if (!play) {
+        player->setVolume(50);
+        player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/1-connexion_session.ogg.wav"));
+        player->play();
+        play=true;
+    }
 }
 
 MainWindow::~MainWindow()
@@ -61,72 +67,95 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event)
   player->setVolume(50);
   if (watched == ui->ConfigORCA && event->type() == QEvent::HoverEnter)
   {
-    qDebug() << "Start hover";
     ui->label->setStyleSheet("background-color: green");
-    player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/7-AccesHandicap.ogg.wav"));
+    m_process->start("createWaveFromItem \"Accès Handicap.\"");
+    play=false;
   }
   else if (watched == ui->Discord && event->type() == QEvent::HoverEnter)
   {
-    qDebug() << "Start hover";
     ui->label->setStyleSheet("background-color: green");
-    player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/10-DiscordLink.ogg.wav"));
+    m_process->start("createWaveFromItem \"Pour rejoindre la communauté HandyOpenSource sur Discord.\"");
+    play=false;
   }
   else if (watched == ui->OuvrirKmag && event->type() == QEvent::HoverEnter)
   {
-    qDebug() << "Start hover";
     ui->label->setStyleSheet("background-color: green");
-    player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/6-Kmag.ogg.wav"));
+    m_process->start("createWaveFromItem \"Ouvrir la loupe Kmag.\"");
+    play=false;
   }
   else if (watched == ui->OuvrirSiteWeb && event->type() == QEvent::HoverEnter)
   {
-    qDebug() << "Start hover";
     ui->label->setStyleSheet("background-color: green");
-    player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/8-SiteWeb.ogg.wav"));
+    m_process->start("createWaveFromItem \"Ouvrir le site web de DVKBuntu.\"");
+    play=false;
   }
   else if (watched == ui->OuvrirNavigateur && event->type() == QEvent::HoverEnter)
   {
-    qDebug() << "Start hover";
     ui->label->setStyleSheet("background-color: green");
-    player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/5-browser.ogg.wav"));
+    m_process->start("createWaveFromItem \"Naviguer sur le net.\"");
+    play=false;
+  }
+  else if (watched == ui->Forum && event->type() == QEvent::HoverEnter)
+  {
+    ui->label->setStyleSheet("background-color: green");
+    m_process->start("createWaveFromItem \"Besoin d'aide, allez sur le forum.\"");
+    play=false;
+  }
+  else if (watched == ui->VocalFly && event->type() == QEvent::HoverEnter)
+  {
+    ui->label->setStyleSheet("background-color: green");
+    m_process->start("createWaveFromItem \"Ouvrir l'interface de VocalFly.\"");
+    play=false;
+  }
+  else if (watched == ui->GitHub && event->type() == QEvent::HoverEnter)
+  {
+    ui->label->setStyleSheet("background-color: green");
+    m_process->start("createWaveFromItem \"Accéder au code source de DVKBuntu.\"");
+    play=false;
   }
   else if (watched == ui->NoComprendo && event->type() == QEvent::HoverEnter)
   {
-    qDebug() << "Start hover";
     ui->label->setStyleSheet("background-color: green");
-    player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/9-nocomprendo.ogg.wav"));
+    m_process->start("createWaveFromItem \"Lancer l'assistant vocal.\"");
+    play=false;
   }
   else if (watched == ui->Contacts && event->type() == QEvent::HoverEnter)
   {
-    qDebug() << "Start hover";
     ui->label->setStyleSheet("background-color: green");
-    player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/11-Email.ogg.wav"));
+    m_process->start("createWaveFromItem \"Nous écrire par mail.\"");
+    play=false;
   }
   else if (watched == ui->Power && event->type() == QEvent::HoverEnter)
   {
-    qDebug() << "Start hover";
     ui->label->setStyleSheet("background-color: green");
+    play=true;
     player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/12-Shutdown.ogg.wav"));
   }
   else if (watched == ui->Reboot && event->type() == QEvent::HoverEnter)
   {
-    qDebug() << "Start hover";
     ui->label->setStyleSheet("background-color: green");
+    play=true;
     player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/13-Reboot.ogg.wav"));
   }
   else if (watched == ui->Deconnection && event->type() == QEvent::HoverEnter)
   {
-    qDebug() << "Start hover";
     ui->label->setStyleSheet("background-color: green");
+    play=true;
     player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/14-LeaveSession.ogg.wav"));
   }
-  else if ((watched == ui->ConfigORCA || watched == ui->Discord || watched == ui->OuvrirKmag || watched == ui->OuvrirSiteWeb || watched == ui->OuvrirNavigateur || watched == ui->NoComprendo || watched == ui->Contacts || watched == ui->Power || watched == ui->Reboot || watched == ui->Deconnection) && event->type() == QEvent::HoverLeave)
+  else if ((watched == ui->VocalFly || watched == ui->GitHub || watched == ui->Forum || watched == ui->ConfigORCA || watched == ui->Discord || watched == ui->OuvrirKmag || watched == ui->OuvrirSiteWeb || watched == ui->OuvrirNavigateur || watched == ui->NoComprendo || watched == ui->Contacts || watched == ui->Power || watched == ui->Reboot || watched == ui->Deconnection) && event->type() == QEvent::HoverLeave)
   {
-    qDebug() << "End hover";
-    player->stop();
-    player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/20-Stop.wav"));
+    m_process->start("createWaveFromItem \"Stop.\"");
+    play=false;
     ui->label->setStyleSheet("background-color: red");
   }
-  player->play();
+  m_process->waitForFinished(-1);
+  if (!play) {
+          player->setVolume(50);
+          player->setMedia(QUrl::fromLocalFile(env.value("HOME") + "/.local/share/dvkbuntu/sonEnCours.wav"));
+          player->play();
+          play=true;
+  }
   return QMainWindow::eventFilter(watched, event);
 }
 
@@ -177,6 +206,22 @@ void MainWindow::on_OuvrirKmag_clicked()
 void MainWindow::on_OuvrirSiteWeb_clicked()
 {
     QDesktopServices::openUrl(QUrl("https://www.dvkbuntu.org", QUrl::TolerantMode));
+}
+
+void MainWindow::on_Forum_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://www.forum.dvkbuntu.org/", QUrl::TolerantMode));
+}
+
+void MainWindow::on_VocalFly_clicked()
+{
+    QProcess *myProcess3 = new QProcess(this);
+    myProcess3->startDetached("/usr/bin/VocalFly");
+}
+
+void MainWindow::on_GitHub_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://github.com/handyopensource", QUrl::TolerantMode));
 }
 
 void MainWindow::on_Contacts_clicked()
