@@ -27,6 +27,7 @@
 #include <QtMultimedia/QMediaPlayer>
 #include <QFileInfo>
 #include <QWidget>
+#include <fstream>
 
 using namespace std;
 
@@ -35,6 +36,84 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ifstream monFlux;
+    monFlux.open((env.value("HOME") + "/.config/kdeglobals").toStdString());
+
+    if(monFlux) // On teste si tout est OK
+    {
+        // Tout est OK, on peut utiliser le fichier
+        string ligne {};
+        while(getline(monFlux, ligne)) {
+            if (ligne == "ScaleFactor=1" || ligne == "ScaleFactor=1.0") {
+                ui->ScaleFactor->setValue(10);
+            }
+            if (ligne == "ScaleFactor=1.1") {
+                ui->ScaleFactor->setValue(11);
+            }
+            if (ligne == "ScaleFactor=1.2") {
+                ui->ScaleFactor->setValue(12);
+            }
+            if (ligne == "ScaleFactor=1.3") {
+                ui->ScaleFactor->setValue(13);
+            }
+            if (ligne == "ScaleFactor=1.4") {
+                ui->ScaleFactor->setValue(14);
+            }
+            if (ligne == "ScaleFactor=1.5") {
+                ui->ScaleFactor->setValue(15);
+            }
+            if (ligne == "ScaleFactor=1.6") {
+                ui->ScaleFactor->setValue(16);
+            }
+            if (ligne == "ScaleFactor=1.7") {
+                ui->ScaleFactor->setValue(17);
+            }
+            if (ligne == "ScaleFactor=1.8") {
+                ui->ScaleFactor->setValue(18);
+            }
+            if (ligne == "ScaleFactor=1.9") {
+                ui->ScaleFactor->setValue(19);
+            }
+            if (ligne == "ScaleFactor=2" || ligne == "ScaleFactor=2.0") {
+                ui->ScaleFactor->setValue(20);
+            }
+            if (ligne == "ScaleFactor=2.1") {
+                ui->ScaleFactor->setValue(21);
+            }
+            if (ligne == "ScaleFactor=2.2") {
+                ui->ScaleFactor->setValue(22);
+            }
+            if (ligne == "ScaleFactor=2.3") {
+                ui->ScaleFactor->setValue(23);
+            }
+            if (ligne == "ScaleFactor=2.4") {
+                ui->ScaleFactor->setValue(24);
+            }
+            if (ligne == "ScaleFactor=2.5") {
+                ui->ScaleFactor->setValue(25);
+            }
+            if (ligne == "ScaleFactor=2.6") {
+                ui->ScaleFactor->setValue(26);
+            }
+            if (ligne == "ScaleFactor=2.7") {
+                ui->ScaleFactor->setValue(27);
+            }
+            if (ligne == "ScaleFactor=2.8") {
+                ui->ScaleFactor->setValue(28);
+            }
+            if (ligne == "ScaleFactor=2.9") {
+                ui->ScaleFactor->setValue(29);
+            }
+            if (ligne == "ScaleFactor=3" || ligne == "ScaleFactor=3.0") {
+                ui->ScaleFactor->setValue(30);
+            }
+        }
+    }
+    else
+    {
+        cout << "Erreur : Impossible d'ouvrir le fichier CreateWave." << endl;
+    }
+    monFlux.close();
     ui->ConfigORCA->installEventFilter(this);
     ui->Discord->installEventFilter(this);
     ui->OuvrirKmag->installEventFilter(this);
@@ -48,6 +127,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->Power->installEventFilter(this);
     ui->Reboot->installEventFilter(this);
     ui->Deconnection->installEventFilter(this);
+    ui->ScaleFactor->installEventFilter(this);
     ui->label->setStyleSheet("background-color: black");
     if (!play) {
         player->setVolume(50);
@@ -65,96 +145,105 @@ MainWindow::~MainWindow()
 bool MainWindow::eventFilter(QObject* watched, QEvent* event)
 {
   player->setVolume(50);
-  if (watched == ui->ConfigORCA && event->type() == QEvent::HoverEnter)
-  {
-    ui->label->setStyleSheet("background-color: green");
-    m_process->start("createWaveFromItem \"Accès Handicap.\"");
-    play=false;
-  }
-  else if (watched == ui->Discord && event->type() == QEvent::HoverEnter)
-  {
-    ui->label->setStyleSheet("background-color: green");
-    m_process->start("createWaveFromItem \"Pour rejoindre la communauté HandyOpenSource sur Discord.\"");
-    play=false;
-  }
-  else if (watched == ui->OuvrirKmag && event->type() == QEvent::HoverEnter)
-  {
-    ui->label->setStyleSheet("background-color: green");
-    m_process->start("createWaveFromItem \"Ouvrir la loupe Kmag.\"");
-    play=false;
-  }
-  else if (watched == ui->OuvrirSiteWeb && event->type() == QEvent::HoverEnter)
-  {
-    ui->label->setStyleSheet("background-color: green");
-    m_process->start("createWaveFromItem \"Ouvrir le site web de DVKBuntu.\"");
-    play=false;
-  }
-  else if (watched == ui->OuvrirNavigateur && event->type() == QEvent::HoverEnter)
-  {
-    ui->label->setStyleSheet("background-color: green");
-    m_process->start("createWaveFromItem \"Naviguer sur le net.\"");
-    play=false;
-  }
-  else if (watched == ui->Forum && event->type() == QEvent::HoverEnter)
-  {
-    ui->label->setStyleSheet("background-color: green");
-    m_process->start("createWaveFromItem \"Besoin d'aide, allez sur le forum.\"");
-    play=false;
-  }
-  else if (watched == ui->VocalFly && event->type() == QEvent::HoverEnter)
-  {
-    ui->label->setStyleSheet("background-color: green");
-    m_process->start("createWaveFromItem \"Ouvrir l'interface de VocalFly.\"");
-    play=false;
-  }
-  else if (watched == ui->GitHub && event->type() == QEvent::HoverEnter)
-  {
-    ui->label->setStyleSheet("background-color: green");
-    m_process->start("createWaveFromItem \"Accéder au code source de DVKBuntu.\"");
-    play=false;
-  }
-  else if (watched == ui->NoComprendo && event->type() == QEvent::HoverEnter)
-  {
-    ui->label->setStyleSheet("background-color: green");
-    m_process->start("createWaveFromItem \"Lancer l'assistant vocal.\"");
-    play=false;
-  }
-  else if (watched == ui->Contacts && event->type() == QEvent::HoverEnter)
-  {
-    ui->label->setStyleSheet("background-color: green");
-    m_process->start("createWaveFromItem \"Nous écrire par mail.\"");
-    play=false;
-  }
-  else if (watched == ui->Power && event->type() == QEvent::HoverEnter)
-  {
-    ui->label->setStyleSheet("background-color: green");
-    play=true;
-    player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/12-Shutdown.ogg.wav"));
-  }
-  else if (watched == ui->Reboot && event->type() == QEvent::HoverEnter)
-  {
-    ui->label->setStyleSheet("background-color: green");
-    play=true;
-    player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/13-Reboot.ogg.wav"));
-  }
-  else if (watched == ui->Deconnection && event->type() == QEvent::HoverEnter)
-  {
-    ui->label->setStyleSheet("background-color: green");
-    play=true;
-    player->setMedia(QUrl::fromLocalFile("/usr/share/dvkbuntu-sound/14-LeaveSession.ogg.wav"));
-  }
-  else if ((watched == ui->VocalFly || watched == ui->GitHub || watched == ui->Forum || watched == ui->ConfigORCA || watched == ui->Discord || watched == ui->OuvrirKmag || watched == ui->OuvrirSiteWeb || watched == ui->OuvrirNavigateur || watched == ui->NoComprendo || watched == ui->Contacts || watched == ui->Power || watched == ui->Reboot || watched == ui->Deconnection) && event->type() == QEvent::HoverLeave)
-  {
-    m_process->start("createWaveFromItem \"Stop.\"");
-    play=false;
-    ui->label->setStyleSheet("background-color: red");
-  }
-  m_process->waitForFinished(-1);
-  if (!play) {
+  if (!fenetreCritical) {
+    if (watched == ui->ScaleFactor && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        QString textScale;
+        m_process->start("createWaveFromItem \"Pour changer le facteur d'échelle de toute l'interface. Actuellement à " + textScale.setNum (scale));
+        play=false;
+    }
+    else if (watched == ui->ConfigORCA && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        m_process->start("createWaveFromItem \"Accès Handicap.\"");
+        play=false;
+    }
+    else if (watched == ui->Discord && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        m_process->start("createWaveFromItem \"Pour rejoindre la communauté HandyOpenSource sur Discord.\"");
+        play=false;
+    }
+    else if (watched == ui->OuvrirKmag && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        m_process->start("createWaveFromItem \"Ouvrir la loupe Kmag.\"");
+        play=false;
+    }
+    else if (watched == ui->OuvrirSiteWeb && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        m_process->start("createWaveFromItem \"Ouvrir le site web de DVKBuntu.\"");
+        play=false;
+    }
+    else if (watched == ui->OuvrirNavigateur && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        m_process->start("createWaveFromItem \"Naviguer sur le net.\"");
+        play=false;
+    }
+    else if (watched == ui->Forum && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        m_process->start("createWaveFromItem \"Besoin d'aide, allez sur le forum.\"");
+        play=false;
+    }
+    else if (watched == ui->VocalFly && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        m_process->start("createWaveFromItem \"Ouvrir l'interface de VocalFly.\"");
+        play=false;
+    }
+    else if (watched == ui->GitHub && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        m_process->start("createWaveFromItem \"Accéder au code source de DVKBuntu.\"");
+        play=false;
+    }
+    else if (watched == ui->NoComprendo && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        m_process->start("createWaveFromItem \"Lancer l'assistant vocal.\"");
+        play=false;
+    }
+    else if (watched == ui->Contacts && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        m_process->start("createWaveFromItem \"Nous écrire par mail.\"");
+        play=false;
+    }
+    else if (watched == ui->Power && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        m_process->start("createWaveFromItem \"Arrêt du PC.\"");
+        play=false;
+    }
+    else if (watched == ui->Reboot && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        m_process->start("createWaveFromItem \"Redémarrage du PC.\"");
+        play=false;
+    }
+    else if (watched == ui->Deconnection && event->type() == QEvent::HoverEnter)
+    {
+        ui->label->setStyleSheet("background-color: green");
+        m_process->start("createWaveFromItem \"Déconnexion de la session courante.\"");
+        play=false;
+    }
+    else if ((watched == ui->ScaleFactor || watched == ui->VocalFly || watched == ui->GitHub || watched == ui->Forum || watched == ui->ConfigORCA || watched == ui->Discord || watched == ui->OuvrirKmag || watched == ui->OuvrirSiteWeb || watched == ui->OuvrirNavigateur || watched == ui->NoComprendo || watched == ui->Contacts || watched == ui->Power || watched == ui->Reboot || watched == ui->Deconnection) && event->type() == QEvent::HoverLeave)
+    {
+        m_process->start("createWaveFromItem \"Stop.\"");
+        play=false;
+        ui->label->setStyleSheet("background-color: red");
+    }
+    m_process->waitForFinished(-1);
+    if (!play) {
           player->setVolume(50);
           player->setMedia(QUrl::fromLocalFile(env.value("HOME") + "/.local/share/dvkbuntu/sonEnCours.wav"));
           player->play();
           play=true;
+    }
   }
   return QMainWindow::eventFilter(watched, event);
 }
@@ -241,10 +330,26 @@ void MainWindow::on_ScaleFactor_valueChanged(int value)
 
 void MainWindow::on_ScaleFactor_sliderReleased()
 {
+    fenetreCritical = true;
+
+    player->stop();
+    play=true;
+
     QMessageBox messageBox;
     QString textScale;
+
+    m_process->start("createWaveFromItem \"Redémarrage requis ! Le nouveau facteur d'échelle est de " + textScale.setNum (scale) + ", les changements d'échelles n'interviendront qu'après un redémarrage\"");
+    m_process->waitForFinished(-1);
+
+    ui->label->setStyleSheet("background-color: red");
+
+    player->setVolume(50);
+    player->setMedia(QUrl::fromLocalFile(env.value("HOME") + "/.local/share/dvkbuntu/sonEnCours.wav"));
+    player->play();
+
     messageBox.critical(0,"Redémarrage requis", "Le nouveau facteur d'échelle est de " + textScale.setNum (scale) + ", les changements d'échelles n'interviendront qu'après un redémarrage");
     messageBox.setFixedSize(500,200);
+    if (!messageBox.isVisible()) { fenetreCritical =false; }
 }
 
 void MainWindow::on_Power_clicked()

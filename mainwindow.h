@@ -17,6 +17,7 @@ class MainWindow : public QMainWindow
 public:
     float scale = 1.8;
     qreal myscale = scale * 10;
+    bool fenetreCritical = false;
     //QSlider ScaleFactor();
     //ScaleFactor().setValue(myscale);
     explicit MainWindow(QWidget *parent = nullptr);
