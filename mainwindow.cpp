@@ -35,6 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    MainWindow::QWidget::adjustSize();
     ui->setupUi(this);
     ifstream monFlux;
     monFlux.open((env.value("HOME") + "/.config/kdeglobals").toStdString());
@@ -377,3 +378,4 @@ void MainWindow::on_Deconnection_clicked()
     player->play();
     system("qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout 0 0 3");
 }
+

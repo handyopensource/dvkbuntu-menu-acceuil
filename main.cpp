@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     a.setWindowIcon(QIcon(":/images/Logo.png"));
     MainWindow* w = new MainWindow;
+    //w->adjustSize();
     w->show();
     return a.exec();
 }

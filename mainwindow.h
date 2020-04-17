@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QtWidgets/QMouseEventTransition>
 #include <QtWidgets>
+#include <QWidget>
 #include <QMediaPlayer>
 
 namespace Ui {
