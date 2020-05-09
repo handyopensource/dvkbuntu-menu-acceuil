@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets multimedia
 
-TARGET = DVKBuntuAcceuil
+TARGET = DVKBuntuAccueil
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -41,6 +41,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    images/DVKBuntu-bleu.jpg \
     images/DVKBuntu-etoiles-filantes.jpg \
     images/favicon.svg \
     images/Firefox_Logo.svg \

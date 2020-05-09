@@ -44,7 +44,7 @@
    <enum>Qt::NoContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string>DVKBuntu Acceuil</string>
+   <string>DVKBuntu Accueil</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
@@ -92,8 +92,9 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QWidget#centralWidget {
-border-image: url(:/images/DVKBuntu-etoiles-filantes.jpg);
-}</string>
+border-image: url(:/images/DVKBuntu-bleu.jpg);
+}
+</string>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">

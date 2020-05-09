@@ -40,5 +40,6 @@
         <file>Sound/14-LeaveSession.ogg.wav</file>
         <file>images/vocalflyicon.png</file>
         <file>images/GitHub.png</file>
+        <file>images/DVKBuntu-bleu.jpg</file>
     </qresource>
 </RCC>

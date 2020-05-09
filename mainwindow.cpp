@@ -326,7 +326,7 @@ void MainWindow::on_ScaleFactor_valueChanged(int value)
     ostringstream newscale;
     newscale<<scale;
     QString newnewscale = QString::fromStdString(newscale.str());
-    QProcess::startDetached("/opt/dvkbuntu-menu-acceuil/ScaleFactor.sh", QStringList {newnewscale});
+    QProcess::startDetached("/opt/dvkbuntu-menu-accueil/ScaleFactor.sh", QStringList {newnewscale});
 }
 
 void MainWindow::on_ScaleFactor_sliderReleased()
