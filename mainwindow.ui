@@ -953,7 +953,7 @@ Sur le net</string>
           <bool>false</bool>
          </property>
          <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ouverture&lt;/p&gt;&lt;p&gt;du forum&lt;/p&gt;&lt;p&gt;DVKBuntu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aller sur&lt;/p&gt;&lt;p&gt;notre&lt;/p&gt;&lt;p&gt;Facebook&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="autoFillBackground">
           <bool>false</bool>
@@ -962,17 +962,18 @@ Sur le net</string>
           <string notr="true">background-color: rgb(0, 0, 0)</string>
          </property>
          <property name="text">
-          <string>Ouvrir
-le Forum</string>
+          <string>Aller sur
+notre
+Facebook</string>
          </property>
          <property name="icon">
           <iconset resource="resources.qrc">
-           <normaloff>:/images/Forum.png</normaloff>:/images/Forum.png</iconset>
+           <normaloff>:/images/facebook.png</normaloff>:/images/facebook.png</iconset>
          </property>
          <property name="iconSize">
           <size>
-           <width>48</width>
-           <height>48</height>
+           <width>78</width>
+           <height>78</height>
           </size>
          </property>
          <property name="autoDefault">
@@ -1073,12 +1074,12 @@ Site Web</string>
          </property>
          <property name="icon">
           <iconset resource="resources.qrc">
-           <normaloff>:/images/Logo.png</normaloff>:/images/Logo.png</iconset>
+           <normaloff>:/images/logo-icon-blanc.png</normaloff>:/images/logo-icon-blanc.png</iconset>
          </property>
          <property name="iconSize">
           <size>
-           <width>48</width>
-           <height>48</height>
+           <width>84</width>
+           <height>84</height>
           </size>
          </property>
          <property name="autoDefault">

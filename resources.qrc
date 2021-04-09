@@ -41,5 +41,7 @@
         <file>images/vocalflyicon.png</file>
         <file>images/GitHub.png</file>
         <file>images/DVKBuntu-bleu.jpg</file>
+        <file>images/facebook.png</file>
+        <file>images/logo-icon-blanc.png</file>
     </qresource>
 </RCC>

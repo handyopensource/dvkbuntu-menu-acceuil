@@ -295,12 +295,12 @@ void MainWindow::on_OuvrirKmag_clicked()
 
 void MainWindow::on_OuvrirSiteWeb_clicked()
 {
-    QDesktopServices::openUrl(QUrl("https://www.dvkbuntu.org", QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl("https://www.handy-open-source.org/", QUrl::TolerantMode));
 }
 
 void MainWindow::on_Forum_clicked()
 {
-    QDesktopServices::openUrl(QUrl("https://www.forum.dvkbuntu.org/", QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl("https://www.facebook.com/HandyOpenSource", QUrl::TolerantMode));
 }
 
 void MainWindow::on_VocalFly_clicked()
