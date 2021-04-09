@@ -1,3 +1,3 @@
 # dvkbuntu-menu-accueil
 
-![Image de l'accueil](images/FenetrePrincipal.png)
+![Image de l'accueil](./images/FenetrePrincipal.png)
